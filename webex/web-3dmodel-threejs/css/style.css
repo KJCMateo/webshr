@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+}
+
+header {
+  margin-top: 3em;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#container3D canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Sidebar styling */
+#profileSidebar {
+  position: fixed;
+  top: 0;
+  left: -400px; /* Hidden initially */
+  width: 400px; /* Sidebar width */
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 200;
+  transition: 0.3s ease-in-out;
+}
+
+#profileSidebar h2 {
+  margin-top: 20px;
+}
+
+#profileSidebar p {
+  margin-top: 10px;
+}
+
+/* Toggle button as part of the sidebar */
+#toggleSidebar {
+  position: absolute;
+  top: 10px;
+  right: -50px; /* Aligned with the sidebar edge */
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 300;
+}
+
+/* Arrow icon inside the button */
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid white; /* Creates an arrow pointing up */
+  transform: rotate(90deg); /* Rotates the arrow to point right */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the arrow to point left when the sidebar is open */
+#profileSidebar.open .arrow-icon {
+  transform: rotate(-90deg); /* Arrow points left when sidebar is open */
+}
+
+
+#toggleSidebar:hover {
+  background-color: #0056b3;
+}

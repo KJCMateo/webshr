@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest - Campus Virtual Tour</title>
+  <link rel="stylesheet" href="gueststyle.css">
+  <script src="guestquestion.js" defer></script>
+</head>
+<body>
+  <h1>Welcome to the Campus Virtual Tour (Guest View)</h1>
+  <p class="introduction">You are logged in as a guest. We'd like to learn more about you to improve your experience.</p>
+
+  <!-- Guest Information Form -->
+  <form action="submit_guest_info_v3.html" method="POST">
+    <div id="question-container">
+      <p id="question"></p>
+      <div id="question-input"></div>
+      <button type="button" id="next-button" onclick="nextQuestion()">Next</button>
+    </div>
+  </form>
+
+  <p class="thank-you">Thank you for sharing! We hope you enjoy the campus tour.</p>
+</body>
+</html>
